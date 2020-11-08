@@ -11,11 +11,6 @@ int convBten(char *n)
     return convInt;
 }
 
-// int getRes(int dividend, int divisor)
-// {
-    
-// }
-
 void convBtwo(int num_to_conv, int * array)
 {
     for (int count = 31; count >= 0; count--) {
@@ -31,8 +26,27 @@ void convBtwo(int num_to_conv, int * array)
 
 void divideBtwo(int * dividend, int * divisor)
 {
-    printf("%d", dividend[1]);
+    // // printf("%d", dividend[1]);
+    // int count2;
+    // // int *rem = dividend;
+    // // int *den
+    
+    // for (count2 = 0; count2 < 32; count2++) {
+    //     // *remainder = remainder[count2] - divisor[count2];
+    //     // printf("%d", remainder[1]);
 
+    //     if (divisor[count2] == dividend[count2]) {
+    //         printf("equal\n");
+    //     } else if (divisor[count2] > dividend[count2]) {
+    //         printf("not valid\n");
+    //         // return -1;
+    //     } else {
+    //         printf("good to go\n");
+
+    //     // count2 = 32;
+
+    
+    
 }
 
 int main( int argc, char *argv[])
@@ -48,41 +62,13 @@ int main( int argc, char *argv[])
         int arg1_Bten = convBten(argv[1]);
         // printf("%d", arg1_Bten);
         convBtwo(arg1_Bten, arr_arg1);
-        /*printf("%d", arr_arg1[0]);
-        printf("%d", arr_arg1[1]);
-        printf("%d", arr_arg1[2]);
-        printf("%d", arr_arg1[3]);
-        printf("%d", arr_arg1[4]);
-        printf("%d", arr_arg1[5]);
-        printf("%d", arr_arg1[6]);
-        printf("%d", arr_arg1[7]);
-        printf("%d", arr_arg1[8]);
-        printf("%d", arr_arg1[9]);
-        printf("%d\n", arr_arg1[10]); */
         int arg2_Bten = convBten(argv[2]);
         convBtwo(arg2_Bten, arr_arg2);
-        /*printf("%d", arr_arg2[0]);
-        printf("%d", arr_arg2[1]);
-        printf("%d", arr_arg2[2]);
-        printf("%d", arr_arg2[3]);
-        printf("%d", arr_arg2[4]);
-        printf("%d", arr_arg2[5]);
-        printf("%d", arr_arg2[6]);
-        printf("%d", arr_arg2[7]);
-        printf("%d", arr_arg2[8]);
-        printf("%d", arr_arg2[9]);
-        printf("%d\n", arr_arg2[10]);
-        */ 
 
-        divideBtwo(*arr_arg1, *arr_arg2);
-
-        // int arg1_Btwo = convBtwo(arg1_Bten);
-        // printf("%d", arg1_Btwo);
-        // int arg2_Bten = convBten(argv[2]);
-        // printf("%d", arg1_Btwo);
-        // int arg2_Btwo = convBtwo(arg2_Btwo);
+        divideBtwo(arr_arg1, arr_arg2); 
+        // int quotient = divideBtwo(arr_arg1, arr_arg2); 
+        // printf("%d", quotient);
         // int quotient = getRes(arg1_Bten, arg2_Bten);
-
         // printf("%s / %s = %d R %d\n", argv[1], argv[2], quotient, rem);
     } 
 }
