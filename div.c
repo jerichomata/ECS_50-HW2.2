@@ -16,10 +16,9 @@ int convBten(char *n)
     
 // }
 
-void convBtwo(int num_to_conv)
+int convBtwo(int num_to_conv)
 {
     int arr[32] = {};
-    int num;
     for (int count = 31; count >= 0; count--) {
         int mask = num_to_conv >> count;
         if (mask & 1) {
