@@ -26,28 +26,33 @@ void convBtwo(int num_to_conv, int * array)
 
 void divideBtwo(int * dividend, int * divisor)
 {
-    // // printf("%d", dividend[1]);
-    // int count2;
-    // // int *rem = dividend;
-    // // int *den
-    
-    // for (count2 = 0; count2 < 32; count2++) {
-    //     // *remainder = remainder[count2] - divisor[count2];
-    //     // printf("%d", remainder[1]);
+    // printf("%d", dividend[1]);
+    // unsigned int quotient = 0;
+    // int *remainder = dividend;
+    // int *mask = divisor;
 
-    //     if (divisor[count2] == dividend[count2]) {
-    //         printf("equal\n");
-    //     } else if (divisor[count2] > dividend[count2]) {
-    //         printf("not valid\n");
-    //         // return -1;
-    //     } else {
-    //         printf("good to go\n");
+    // int index = 0;
+    for (int i = 0; i < 32; i++) 
+    {
+        printf("%d", divisor[i]);
+    }
 
-    //     // count2 = 32;
+    for (int i = 32; i <= 0; i--) 
+    {
+        while (divisor[i] < dividend[i]) 
+        {
+            divisor[i] = divisor[i] << 1;
+            printf("%d", divisor[i]);
+        }
+    }
 
-    
-    
-}
+
+    printf("\n");
+    for (int i = 0; i < 32; i++) 
+    {
+        printf("%d", dividend[i]);
+    }
+}       
 
 int main( int argc, char *argv[])
 {
